@@ -25,7 +25,7 @@ btn.onclick = function () {
 function dragItme() {
   let items = document.querySelectorAll(".item");
   //   loop in items to drag and drop
-  
+
   items.forEach((item) => {
     item.addEventListener("dragstart", function () {
       drag = item;
@@ -34,7 +34,10 @@ function dragItme() {
 
     item.addEventListener("dragend", function () {
       drag = null;
+      item.style.opacity = "1";
     });
+    
+    // loop in boxes to chech if have items or not
 
     boxes.forEach((box) => {
       box.addEventListener("dragover", function (e) {
